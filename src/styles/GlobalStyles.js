@@ -31,42 +31,42 @@ export const GlobalStyles = createGlobalStyle`
     
     @font-face {
         font-family: 'Clash Display';
-        src: local('ClashDisplayExtraLight'), url(src/assets/fonts/clash-display/ClashDisplayExtraLight.otf) format('truetype');
+        src: local('ClashDisplayExtraLight'), url(fonts/clash-display/ClashDisplayExtraLight.otf) format('truetype');
         font-weight: 100;
         font-style: normal;
     }
 
     @font-face {
         font-family: 'Clash Display';
-        src: local('ClashDisplayLight'), url(src/assets/fonts/clash-display/ClashDisplayLight.otf) format('truetype');
+        src: local('ClashDisplayLight'), url(fonts/clash-display/ClashDisplayLight.otf) format('truetype');
         font-weight: 200;
         font-style: normal;
     }
 
     @font-face {
         font-family: 'Clash Display';
-        src: local('ClashDisplayRegular'), url(src/assets/fonts/clash-display/ClashDisplayRegular.otf) format('truetype');
+        src: local('ClashDisplayRegular'), url(fonts/clash-display/ClashDisplayRegular.otf) format('truetype');
         font-weight: 300;
         font-style: normal;
     }
 
     @font-face {
         font-family: 'Clash Display';
-        src: local('ClashDisplayMedium'), url(src/assets/fonts/clash-display/ClashDisplayMedium.otf) format('truetype');
+        src: local('ClashDisplayMedium'), url(fonts/clash-display/ClashDisplayMedium.otf) format('truetype');
         font-weight: 400;
         font-style: normal;
     }
 
     @font-face {
         font-family: 'Clash Display';
-        src: local('ClashDisplaySemibold'), url(src/assets/fonts/clash-display/ClashDisplaySemibold.otf) format('truetype');
+        src: local('ClashDisplaySemibold'), url(fonts/clash-display/ClashDisplaySemibold.otf) format('truetype');
         font-weight: 500;
         font-style: normal;
     }
 
     @font-face {
         font-family: 'Clash Display';
-        src: local('ClashDisplayBold'), url(src/assets/fonts/clash-display/ClashDisplayBold.otf) format('truetype');
+        src: local('ClashDisplayBold'), url(fonts/clash-display/ClashDisplayBold.otf) format('truetype');
         font-weight: 600;
         font-style: normal;
     }
