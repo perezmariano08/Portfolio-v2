@@ -11,14 +11,16 @@ export const HeroWrapper = styled.div`
     padding: 30px;
     max-width: 1000px;
     width: 100%;
+    gap: 30px;
     display: flex;
+    align-items: center;
 `
 
 export const HeroText = styled.div`
     display: flex;
     flex-direction: column;
     gap: 30px;
-
+    width: 70%;
     p {
         width: 60%;
         @media (max-width: 500px) {
@@ -31,6 +33,8 @@ export const HeroTitle = styled.div`
     display: flex;
     flex-direction: column;
     color: var(--lightest-slate);
+    width: fit-content;
+
     h4 {
         font-weight: 400;
         color: var(--green);

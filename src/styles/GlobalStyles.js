@@ -96,9 +96,7 @@ export const GlobalStyles = createGlobalStyle`
         font-weight: 500;
     }
 
-    body {
-        height: 5000px;
-    }
+    
 
     p {
         font-size: 16px;

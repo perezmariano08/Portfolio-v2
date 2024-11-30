@@ -6,7 +6,7 @@ export const ProyectosDestacadosContainer = styled(ContainerStyled)`
 `
 
 export const ProyectosDestacadosWrapper = styled(WrapperStyled)`
-    gap: 80px;
+    gap: 40px;
 `
 
 export const ProyectosDestacadosTitle = styled.div`
@@ -24,6 +24,7 @@ export const ProyectosDestacadosTitle = styled.div`
     .linea {
         height: 1px;
         width: 100%;
+        margin-left: 20px;
         background-color: var(--lightest-navy);
     }
 `
@@ -129,7 +130,7 @@ export const ProyectosDestacadosImagen = styled.div`
 
         a {
             img {
-                opacity: .2;
+                opacity: .1;
             }
         }
     }

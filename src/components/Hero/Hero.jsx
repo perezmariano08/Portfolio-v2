@@ -1,11 +1,13 @@
 import React from 'react'
 import { HeroContainerStyled, HeroText, HeroTitle, HeroWrapper } from './HeroStyles'
 import Button from '../Button/Button';
+import ImagenPerfil from '../ImagenPerfil/ImagenPerfil';
 
 const Hero = () => {
     return (
         <HeroContainerStyled>
             <HeroWrapper>
+                {/* <ImagenPerfil/> */}
                 <HeroText>
                     <HeroTitle>
                         <h1>Mariano Perez</h1>
