@@ -1,96 +1,119 @@
 import React from 'react'
-import { ProyectosDestacadoItem, ProyectosDestacadosContainer, ProyectosDestacadosDescripcion, ProyectosDestacadosImagen, ProyectosDestacadosLinks, ProyectosDestacadosTecnologias, ProyectosDestacadosTitle, ProyectosDestacadosTitulo, ProyectosDestacadosWrapper } from './ProyectosDestacadosStyles'
-import { FaGithub, FaGithubAlt, FaGithubSquare } from 'react-icons/fa'
-import { FiExternalLink, FiGithub, FiLink } from "react-icons/fi";
+import { ProyectosDestacadoItem, ProyectosDestacadosContainer, ProyectosDestacadosImagen, ProyectosDestacadosLinks, ProyectosDestacadosTecnologias, ProyectosDestacadosTecnologiasDetalle, ProyectosDestacadosTecnologiasDivisor, ProyectosDestacadosTecnologiasLista, ProyectosDestacadosTexto, ProyectosDestacadosTitulo, ProyectosDestacadosWrapper } from './ProyectosDestacadosStyles'
+import { ProyectosDestacadoCardTecnologias } from '../ProyectosDestacadosOtros/ProyectosDestacadosOtrosStyles'
+import { FiExternalLink, FiGithub } from 'react-icons/fi'
+import { TituloSeccionNombre, TituloSeccionWrapper } from '../Layout/LayoutStyles'
+import { TbSunLow } from 'react-icons/tb'
 
 const ProyectosDestacados = () => {
     return (
-        <ProyectosDestacadosContainer>
+        <ProyectosDestacadosContainer id='proyectos'>
+            <TituloSeccionWrapper>
+                    <TituloSeccionNombre>
+                        <TbSunLow />
+                        Proyectos
+                    </TituloSeccionNombre>
+                    <h2>Algunas cosas que he construido</h2>
+                </TituloSeccionWrapper>
             <ProyectosDestacadosWrapper>
-                <ProyectosDestacadosTitle>
-                    <p>03.</p>
-                    <h3>Proyectos</h3>
-                    <div className='linea'></div>
-                </ProyectosDestacadosTitle>
                 <ProyectosDestacadoItem>
-                    <ProyectosDestacadosTitulo>
-                        <span>Proyecto destacado</span>
-                        <a href="https://coparelampago.com" target='_blank'>Copa Relámpago Software</a>
-                    </ProyectosDestacadosTitulo>
-                    <ProyectosDestacadosDescripcion>
-                        <p>Proyecto de tesis - Sistema de gestion para Copa Relámpago, un torneo de fútbol 7 de Córdoba, Argentina. Cuenta con roles de administrador, planillero y usuario, entre otras muchas cosas más!
-                        </p>
-                    </ProyectosDestacadosDescripcion>
-                    <ProyectosDestacadosTecnologias>
-                        <li>React</li>
-                        <li>Node.js</li>
-                        <li>Express</li>
-                        <li>Railway</li>
-                    </ProyectosDestacadosTecnologias>
-                    <ProyectosDestacadosLinks>
-                        <a href="https://github.com/perezmariano08/CR_Frontend" target='_blank'>
-                            <FiGithub />
-                        </a>
-                        <a href="https://coparelampago.com" target='_blank'>
-                            <FiExternalLink />
-                        </a>
-                    </ProyectosDestacadosLinks>
                     <ProyectosDestacadosImagen className='right'>
                         <a href="https://coparelampago.com" target='_blank'>
-                            <img src="/Login.jpg" alt="" srcset="" />
+                            <img src="/cr_mockup.jpg" alt="" srcset="" />
                         </a>
                     </ProyectosDestacadosImagen>
+                    <ProyectosDestacadosTexto>
+                        <ProyectosDestacadosTitulo>
+                            <a href="https://coparelampago.com" target='_blank'>Copa Relámpago Software</a>
+                            <p>Proyecto de tesis - Sistema de gestion para Copa Relámpago, un torneo de fútbol 7 de Córdoba, Argentina. Cuenta con roles de administrador, planillero y usuario, entre otras muchas cosas más!
+                            </p>
+                        </ProyectosDestacadosTitulo>
+                        <ProyectosDestacadosTecnologias>
+                            <ProyectosDestacadosTecnologiasDetalle>
+                                <ProyectosDestacadosTecnologiasLista>
+                                    <li>React</li>
+                                    <li>Styled Components</li>
+                                    <li>Node.js</li>
+                                    <li>Express</li>
+                                    <li>Railway</li>
+                                </ProyectosDestacadosTecnologiasLista>
+                            </ProyectosDestacadosTecnologiasDetalle>
+                            <ProyectosDestacadosTecnologiasDivisor />
+                            <ProyectosDestacadosLinks>
+                                <a href="https://github.com/perezmariano08/CR_Frontend" target='_blank'>
+                                    <FiGithub />
+                                </a>
+                                <a href="https://coparelampago.com" target='_blank'>
+                                    <FiExternalLink />
+                                </a>
+                            </ProyectosDestacadosLinks>
+                        </ProyectosDestacadosTecnologias>
+                    </ProyectosDestacadosTexto>
                 </ProyectosDestacadoItem>
                 <ProyectosDestacadoItem className='right'>
-                    <ProyectosDestacadosTitulo className='right'>
-                        <span>Proyecto destacado</span>
-                        <a href="https://coparelampago.com" target='_blank'>Gentio - Landing Page</a>                    </ProyectosDestacadosTitulo>
-                    <ProyectosDestacadosDescripcion>
-                        <p>Landing page elaborada con un analisis previo de competencias y pedido de usuario.</p>
-                    </ProyectosDestacadosDescripcion>
-                    <ProyectosDestacadosTecnologias>
-                        <li>React</li>
-                        <li>Styled Components</li>
-                    </ProyectosDestacadosTecnologias>
-                    <ProyectosDestacadosLinks>
-                        <a href='https://github.com/perezmariano08/Gentio-Web' target='_blank'>
-                            <FiGithub />
-                        </a>
-                        <a href="https://gentiomkt.com/" target='_blank'>
-                            <FiExternalLink />
-                        </a>
-                    </ProyectosDestacadosLinks>
-                    <ProyectosDestacadosImagen className='left'>
-                        <a href="https://coparelampago.com" target='_blank'>
-                            <img src="/gentio.jpg" alt="" srcset="" />
+                    <ProyectosDestacadosImagen className='right'>
+                        <a href="https://gentiomkt.com" target='_blank'>
+                            <img src="/gentio_mockup.jpg" alt="" srcset="" />
                         </a>
                     </ProyectosDestacadosImagen>
+                    <ProyectosDestacadosTexto>
+                        <ProyectosDestacadosTitulo>
+                            <a href="https://gentiomkt.com" target='_blank'>Gentio - Landing Page</a>
+                            <p>Landing page elaborada con un analisis previo de competencias y pedido de usuario.
+                            </p>
+                        </ProyectosDestacadosTitulo>
+                        <ProyectosDestacadosTecnologias>
+                            <ProyectosDestacadosTecnologiasDetalle>
+                                <ProyectosDestacadosTecnologiasLista>
+                                    <li>React</li>
+                                    <li>Node.js</li>
+                                    <li>Express</li>
+                                    <li>Railway</li>
+                                </ProyectosDestacadosTecnologiasLista>
+                            </ProyectosDestacadosTecnologiasDetalle>
+                            <ProyectosDestacadosTecnologiasDivisor />
+                            <ProyectosDestacadosLinks>
+                                <a href="https://github.com/perezmariano08/Gentio-Web" target='_blank'>
+                                    <FiGithub />
+                                </a>
+                                <a href="https://gentiomkt.com" target='_blank'>
+                                    <FiExternalLink />
+                                </a>
+                            </ProyectosDestacadosLinks>
+                        </ProyectosDestacadosTecnologias>
+                    </ProyectosDestacadosTexto>
+                    
                 </ProyectosDestacadoItem>
                 <ProyectosDestacadoItem>
-                    <ProyectosDestacadosTitulo>
-                        <span>Proyecto destacado</span>
-                        <a href="https://coparelampago.com" target='_blank'>Neumaticor - Landing Page</a>
-                    </ProyectosDestacadosTitulo>
-                    <ProyectosDestacadosDescripcion>
-                        <p>Landing page para la venta de
-                        neumáticos, optimización con
-                        herramientas de SEO y Google Ads para
-                        mejorar visibilidad y captación.</p>
-                    </ProyectosDestacadosDescripcion>
-                    <ProyectosDestacadosTecnologias>
-                        <li>React</li>
-                        <li>Styled Components</li>
-                    </ProyectosDestacadosTecnologias>
-                    <ProyectosDestacadosLinks>
-                        <a href="https://www.neumaticor.com/" target='_blank'>
-                            <FiExternalLink />
-                        </a>
-                    </ProyectosDestacadosLinks>
                     <ProyectosDestacadosImagen className='right'>
-                        <a href="https://coparelampago.com" target='_blank'>
-                            <img src="/neumaticor.jpg" alt="" srcset="" />
+                        <a href="https://neumaticor.com" target='_blank'>
+                            <img src="/neumaticor_mockup.jpg" alt="" srcset="" />
                         </a>
                     </ProyectosDestacadosImagen>
+                    <ProyectosDestacadosTexto>
+                        <ProyectosDestacadosTitulo>
+                            <a href="https://neumaticor.com" target='_blank'>Neumaticor - Landing Page</a>
+                            <p>Landing page para la venta de neumáticos, optimización con herramientas de SEO y Google Ads para mejorar visibilidad y captación.
+                            </p>
+                        </ProyectosDestacadosTitulo>
+                        <ProyectosDestacadosTecnologias>
+                            <ProyectosDestacadosTecnologiasDetalle>
+                                <ProyectosDestacadosTecnologiasLista>
+                                    <li>React</li>
+                                    <li>Styled Components</li>
+                                </ProyectosDestacadosTecnologiasLista>
+                            </ProyectosDestacadosTecnologiasDetalle>
+                            <ProyectosDestacadosTecnologiasDivisor />
+                            <ProyectosDestacadosLinks>
+                                <a href="https://github.com/perezmariano08/Neumaticor" target='_blank'>
+                                    <FiGithub />
+                                </a>
+                                <a href="https://neumaticor.com" target='_blank'>
+                                    <FiExternalLink />
+                                </a>
+                            </ProyectosDestacadosLinks>
+                        </ProyectosDestacadosTecnologias>
+                    </ProyectosDestacadosTexto>
                 </ProyectosDestacadoItem>
             </ProyectosDestacadosWrapper>
         </ProyectosDestacadosContainer>

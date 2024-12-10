@@ -13,7 +13,7 @@ export const MailContainer = styled.div`
         -webkit-writing-mode: vertical-rl;
         writing-mode: vertical-rl;
         letter-spacing: .1em;
-        color: var(--gray-200);
+        color: var(--white-600);
         font-size: 14px;
         transition: all .2s ease-in-out;
         font-weight: 300;
@@ -27,7 +27,7 @@ export const MailContainer = styled.div`
     .linea {
         width: 1.5px;
         height: 90px;
-        background-color: var(--gray-200);
+        background-color: var(--white-600);
     }
 
     @media (max-width: 1200px) {

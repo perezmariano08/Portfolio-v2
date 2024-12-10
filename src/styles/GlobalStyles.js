@@ -6,7 +6,6 @@ export const GlobalStyles = createGlobalStyle`
         --blue: #0A192F;
         --blue-light: #112240;
         --blue-lightest: #233554;
-        --green: #ABF129;
         
         --dark-slate: #495670;
         --slate: #8892b0;
@@ -27,57 +26,40 @@ export const GlobalStyles = createGlobalStyle`
         --gray-600: #26282B;
         --gray-700: #1B1D1F;
         --black: #121212;
-    }
-    
-    @font-face {
-        font-family: 'Clash Display';
-        src: local('ClashDisplayExtraLight'), url(fonts/clash-display/ClashDisplayExtraLight.otf) format('truetype');
-        font-weight: 100;
-        font-style: normal;
+
+
+        --code : 'Fira Code', sans-serif;
+
+        // New //
+        --breakpoint-xs: 480px; /* Móviles pequeños */
+        --breakpoint-sm: 768px; /* Tablets */
+        --breakpoint-md: 1024px; /* Laptops pequeñas */
+        --breakpoint-lg: 1280px; /* Laptops grandes */
+        --breakpoint-xl: 1440px; /* Pantallas grandes */
+
+        --green: #CDF140;
+        --black-700: #0F0F0F;
+        --black-600: #141414;
+        --black-500: #1A1A1A;
+        --black-400: #1F1F1F;
+        --black-300: #262626;
+        --black-200: #2E2E2E;
+        --black-100: #404040;
+        --white-600: #96979C;
+        --white-500: #B0B1B5;
+        --white-400: #CACBCE;
+        --white-300: #E4E5E6;
+        --white-200: #F2F2F3;
+        --white-100: #F7F7F8;
     }
 
-    @font-face {
-        font-family: 'Clash Display';
-        src: local('ClashDisplayLight'), url(fonts/clash-display/ClashDisplayLight.otf) format('truetype');
-        font-weight: 200;
-        font-style: normal;
+    html {
+        scroll-behavior: smooth;
     }
-
-    @font-face {
-        font-family: 'Clash Display';
-        src: local('ClashDisplayRegular'), url(fonts/clash-display/ClashDisplayRegular.otf) format('truetype');
-        font-weight: 300;
-        font-style: normal;
-    }
-
-    @font-face {
-        font-family: 'Clash Display';
-        src: local('ClashDisplayMedium'), url(fonts/clash-display/ClashDisplayMedium.otf) format('truetype');
-        font-weight: 400;
-        font-style: normal;
-    }
-
-    @font-face {
-        font-family: 'Clash Display';
-        src: local('ClashDisplaySemibold'), url(fonts/clash-display/ClashDisplaySemibold.otf) format('truetype');
-        font-weight: 500;
-        font-style: normal;
-    }
-
-    @font-face {
-        font-family: 'Clash Display';
-        src: local('ClashDisplayBold'), url(fonts/clash-display/ClashDisplayBold.otf) format('truetype');
-        font-weight: 600;
-        font-style: normal;
-    }
-
     body {
-        background-color: var(--navy);
-        color: var(--lightest-slate);
-    }
-    
-    a {
-        color: var(--lightest-slate);
+        background-color: var(--black-700);
+        color: var(--white-500);
+        
     }
 
     * {
@@ -86,23 +68,67 @@ export const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
         text-decoration: none;
         list-style-type: none;
-        font-family: 'Clash Display', sans-serif;
+        font-family: 'Rethink Sans', sans-serif;
     }
 
 
     h1 {
-        font-size: 61.04px;
-        line-height: 61.04px;
-        font-weight: 500;
+        font-size: 80px;
+        line-height: 80px;
+        font-weight: 800;
+
+        @media (max-width: 768px) {
+            font-size: 45px;
+            line-height: 45px;
+        }
+    }
+
+    h2 {
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: 800;
+
+        @media (max-width: 768px) {
+            font-size: 25px;
+            line-height: 25px;
+        }
     }
 
     
 
     p {
-        font-size: 16px;
-        font-weight: 300;
-        letter-spacing: .03em;
-        color: var(--gray-200);
+        font-size: 18px;
+        font-weight: 400;
+        color: var(--white-500);
+
+        @media (max-width: 768px) {
+            font-size: 15px;
+        }
+
+        a {
+            color: var(--green);
+            font-weight: 500;
+            position: relative; /* Necesario para el pseudo-elemento */
+            text-decoration: none; /* Elimina el subrayado predeterminado */
+            transition: color 0.3s ease-in-out;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0px; /* Ajusta la posición debajo del texto */
+                left: 0;
+                width: 0; /* Inicialmente sin ancho */
+                height: .5px; /* Altura de la línea */
+                background-color: var(--green); /* Color de la línea */
+                transition: width 0.3s ease-in-out; /* Animación suave */
+            }
+
+            &:hover {
+                &::after {
+                    width: 100%; /* Expande la línea al ancho completo */
+                }
+            }
+        }
     }
 
     /* Ancho de la barra de desplazamiento */
@@ -117,7 +143,7 @@ export const GlobalStyles = createGlobalStyle`
 
 /* Barra de desplazamiento */
 ::-webkit-scrollbar-thumb {
-    background-color: var(--dark-slate);
+    background-color: var(--black-100);
     border-radius: 4px;
 }
 

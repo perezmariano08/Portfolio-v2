@@ -1,19 +1,33 @@
 import styled from "styled-components";
 
 export const ButtonWrapper = styled.button`
-    padding: 0.75rem 1rem;
-    border: 1px solid var(--green);
-    background-color: transparent;
-    border-radius: 5px;
-    color: var(--green);
-    font-weight: 300;
-    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-    width: fit-content;
+    padding: 14px 28px;
+    border: 2px solid var(--green);
+    background-color: var(--green);
+    border-radius: 50px;
+    color: var(--black-700);
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
-    
+    width: fit-content;
+
     &:hover {
-        outline: none;
-        box-shadow: 3px 3px 0 0 var(--green);
-        transform: translate(-4px, -4px);
+        background-color: transparent; /* El fondo se vuelve transparente */
+        color: var(--green); /* El texto toma el color del borde */
+        border-color: var(--green-light); /* Cambia a un tono más claro de verde */
+        transform: translateY(-4px); /* Desplaza el botón ligeramente hacia arriba */
+        box-shadow: 0 8px 20px rgba(0, 128, 0, 0.3); /* Sombra elegante */
     }
-`
+
+    &:active {
+        transform: translateY(0); /* Vuelve a su posición original */
+        box-shadow: 0 4px 10px rgba(0, 128, 0, 0.2); /* Reduce la sombra */
+    }
+
+    @media (max-width: 500px) {
+        font-size: 15px;
+    }
+`;
+

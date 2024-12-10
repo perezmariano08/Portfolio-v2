@@ -1,43 +1,67 @@
 import styled from "styled-components";
 
-export const NavbarContainerStyled = styled.header`    
-    height: 80px;
+export const NavbarContainerStyled = styled.header` 
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
     position: fixed;
-    top: 0;
+    top: 32px;
     z-index: 99;
-    background-color: var(--navy);
+    padding: 0 20px;
+    height: 80px;
+    @media (max-width: 768px) {
+        padding: 0 15px;
+    }
 `
 
 export const NavbarWrapper = styled.div`
-    font-weight: 200;
+    background-color: rgba(15, 15, 15, 0.65);
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px); /* Compatibilidad con Safari */
+    border: 1px solid var(--black-300);
+    padding: 14px 14px 14px 28px;
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
     display: flex;
     align-items: center;
-    padding: 0 60px;
-    width: 100%;
+    border-radius: 50px;
     justify-content: space-between;
-
     @media (max-width: 768px) {
-        padding: 0 20px;
+        padding-left: 14px;
     }
 `
 
 export const NavbarLogo = styled.div`
-    font-weight: 600;
+    font-weight: 800;
+    height: 100%;
+    aspect-ratio: 1; /* Mantiene el ancho igual al alto */
     font-size: 30px;
-
-    & span {
-        color: var(--green);
-    }
+    font-weight: 700;
+    border-radius: 50% 50% 0 50%;
+    color: var(--black-700);
+    background-color: var(--green);
+    border: 3px solid var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `
 
 export const NavbarList = styled.ul`
     display: flex;
     align-items: center;
     gap: 25px;
+    font-size: 18px;
 
+    li a {
+        cursor: pointer;
+        color: var(--white-300);
+        transition: all .2s ease-in-out;
+        &:hover {
+            color: var(--green);
+        }
+    }
     span {
         color: var(--green);
         margin-right: 2px;
@@ -57,5 +81,6 @@ export const NavbarBars = styled.div`
         align-items: center;
         justify-content: center;
         color: var(--green);
+        margin-right: 14px;
     }
 `

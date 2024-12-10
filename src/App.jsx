@@ -6,6 +6,7 @@ import Mail from './components/Mail/Mail'
 import ProyectosDestacados from './components/ProyectosDestacados/ProyectosDestacados'
 import ProyectosDestacadosOtros from './components/ProyectosDestacadosOtros/ProyectosDestacadosOtros'
 import Layout from './components/Layout/Layout'
+import Experiencia from './components/Experiencia/Experiencia'
 
 const App = () => {
   return (
@@ -13,8 +14,11 @@ const App = () => {
       <Navbar/>
       <Layout>
         <Hero/>
+        <Experiencia/>
         <ProyectosDestacados/>
-        <ProyectosDestacadosOtros/>
+
+        {/* 
+        <ProyectosDestacadosOtros/> */}
 
       </Layout>
       

@@ -2,11 +2,15 @@ import styled from "styled-components";
 import { ContainerStyled, WrapperStyled } from "../Mockups/Mockups";
 
 export const ProyectosDestacadosContainer = styled(ContainerStyled)`
-    
+    flex-direction: column;
+    align-items: center;
+    scroll-margin-top: 150px; /* Ajusta según el tamaño deseado */
+
 `
 
 export const ProyectosDestacadosWrapper = styled(WrapperStyled)`
     gap: 40px;
+    margin-top: 80px;
 `
 
 export const ProyectosDestacadosTitle = styled.div`
@@ -31,37 +35,63 @@ export const ProyectosDestacadosTitle = styled.div`
 
 export const ProyectosDestacadoItem = styled.div`
     display: flex;
-    gap: 30px;
-    padding: 30px 0;
     position: relative;
-    flex-direction: column;
+    background-color: var(--black-600);
+    border-radius: 16px;
+    border: 1px solid var(--black-200);
+    overflow: hidden;
 
     &.right {
-        align-items: end;
-        text-align: end;
+        flex-direction: row-reverse;
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
     }
 
-    @media (max-width: 968px) {
-        padding: 25px;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+
+`
+export const ProyectosDestacadosImagen = styled.div`
+    width: 100%;
+    max-width: 350px;
+    
+    a {
+        width: 100%;
+        height: 100%;
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        max-width: none;
     }
 `
 
+export const ProyectosDestacadosTexto = styled.div`
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 30px;
+
+    @media (max-width: 768px) {
+        padding: 20px;
+    }
+`
 
 export const ProyectosDestacadosTitulo = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    z-index: 1;
-
-    span {
-        font-size: 14px;
-        color: var(--green);
-    }
+    gap: 10px;
 
     a {
-        font-size: 26px;
-        font-weight: 600;
-        color: var(--lightest-slate);
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--white-100);
         transition: all .2s ease-in-out;
         width: fit-content;
         &:hover {
@@ -70,71 +100,56 @@ export const ProyectosDestacadosTitulo = styled.div`
     }
 `
 
-export const ProyectosDestacadosDescripcion = styled.div`
-    display: flex;
-    padding: 20px;
-    max-width: 500px;
-    background-color: var(--light-navy);
-    z-index: 1;
 
+export const ProyectosDestacadosTecnologias = styled.div`
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: var(--black-500);
+    gap: 30px;
+    padding: 20px 30px 20px 20px;
+    border: 1px solid var(--black-200);
+    border-radius: 16px;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 20px;
+    }
 `
 
-export const ProyectosDestacadosTecnologias = styled.ul`
+export const ProyectosDestacadosTecnologiasDetalle = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+
+    span {
+        color: var(--green);
+        font-size: 20px;
+        font-weight: 700;
+    }
+`
+
+export const ProyectosDestacadosTecnologiasLista = styled.ul`
     display: flex;
     gap: 20px;
-    z-index: 1;
-    
+    flex-wrap: wrap;
+    row-gap: 10px;
 
     li {
-        color: var(--light-slate);
-        font-weight: 300;
+        font-family: var(--code);
+        font-weight: 14px;
     }
 `
 
-export const ProyectosDestacadosImagen = styled.div`
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 85%;
-    max-width: 60%;
-
-    &.left {
-        left: 0;
-        right: none;
-    }
-
-    &.right {
-        right: 0;
-    }
-
-    a {
-        border-radius: 4px;
-        height: 100%;
-        img {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-            opacity: .8;
-            filter: grayscale(100%) contrast(1) brightness(90%);
-            transition: all .2s ease-in-out;
-            &:hover {
-                filter: none;
-            }
-        }
-    }
-
-    @media (max-width: 968px) {
-        max-width: 100%;
-        width: 100%;
-        height: 100%;
-
-        a {
-            img {
-                opacity: .1;
-            }
-        }
-    }
+export const ProyectosDestacadosTecnologiasDivisor = styled.ul`
+    height: 100%;
+    width: 1px;
+    background-color: var(--black-200);
 `
+
+
 
 export const ProyectosDestacadosLinks = styled.div`
     display: flex;
@@ -142,9 +157,13 @@ export const ProyectosDestacadosLinks = styled.div`
 
     svg {
         font-size: 22px;
+        color: var(--white-500);
         cursor: pointer;
         transition: all .2s ease-in-out;
         &:hover {
+            color: var(--green);
+        }
+        @media (max-width: 768px) {
             color: var(--green);
         }
     }

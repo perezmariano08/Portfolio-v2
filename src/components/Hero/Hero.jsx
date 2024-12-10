@@ -10,10 +10,11 @@ const Hero = () => {
                 {/* <ImagenPerfil/> */}
                 <HeroText>
                     <HeroTitle>
-                        <h1>Mariano Perez</h1>
+                        <span>Hola, mi nombre es</span>
+                        <h1>Mariano Perez.</h1>
                         <h4>Desarrollador Web - Analista de Sistemas</h4>
                     </HeroTitle>
-                    <p>Soy un desarrollador web enfocado en crear y diseñar experiencias digitales que mejoren la eficiencia. Actualmente, me dedico a construir productos accesibles y centrados en el usuario.</p>
+                    <p>Soy un desarrollador web enfocado en crear y diseñar experiencias digitales que mejoren la eficiencia. Actualmente, me dedico a construir productos accesibles y centrados en el <a href='gentiomkt.com'>usuario</a>.</p>
                     <Button>
                         Ver mis proyectos
                     </Button>

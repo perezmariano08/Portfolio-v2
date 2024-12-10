@@ -9,15 +9,14 @@ const Navbar = () => {
         <NavbarContainerStyled>
             <NavbarWrapper>
                 <NavbarLogo>
-                    <span>.</span>mp
+                    M
                 </NavbarLogo>
                 <NavbarList>
-                    <li><span>01.</span> Sobre mi</li>
-                    <li><span>02.</span> Educación</li>
-                    <li><span>03.</span> Proyectos</li>
-                    <li><span>04.</span> Contacto</li>
+                    <li><a href="#sobre-mi">Sobre mi</a></li>
+                    <li><a href="#experiencia">Experiencia</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
                     <Button>
-                        Descargar CV
+                        Contacto
                     </Button>
                 </NavbarList>
                 <NavbarBars>

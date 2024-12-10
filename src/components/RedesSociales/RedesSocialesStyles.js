@@ -20,7 +20,7 @@ export const RedesSocialesContainer = styled.div`
                 padding: 10px;
                 svg {
                     font-size: 20px;
-                    color: var(--gray-200);
+                    color: var(--white-600);
                     transition: all .2s ease-in-out;
                     cursor: pointer;
                 }
@@ -39,7 +39,7 @@ export const RedesSocialesContainer = styled.div`
     .linea {
         width: 1.5px;
         height: 90px;
-        background-color: var(--gray-200);
+        background-color: var(--white-600);
     }
 
     @media (max-width: 1200px) {
