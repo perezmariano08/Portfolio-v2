@@ -5,18 +5,18 @@ import ImagenPerfil from '../ImagenPerfil/ImagenPerfil';
 
 const Hero = () => {
     return (
-        <HeroContainerStyled>
+        <HeroContainerStyled id='sobre-mi'>
             <HeroWrapper>
-                {/* <ImagenPerfil/> */}
                 <HeroText>
                     <HeroTitle>
                         <span>Hola, mi nombre es</span>
                         <h1>Mariano Perez.</h1>
                         <h4>Desarrollador Web - Analista de Sistemas</h4>
                     </HeroTitle>
-                    <p>Soy un desarrollador web enfocado en crear y diseñar experiencias digitales que mejoren la eficiencia. Actualmente, me dedico a construir productos accesibles y centrados en el <a href='gentiomkt.com'>usuario</a>.</p>
-                    <Button>
-                        Ver mis proyectos
+                    <p>
+                    Soy un diseñador y desarrollador web con experiencia en sistemas y soluciones digitales. Me dedico a crear proyectos funcionales, combinando diseño y tecnología.</p>
+                    <Button target={'_blank'} href="/pdf/CV.pdf">
+                        Descargar CV
                     </Button>
                 </HeroText>
             </HeroWrapper>

@@ -10,6 +10,7 @@ export const NavbarContainerStyled = styled.header`
     z-index: 99;
     padding: 0 20px;
     height: 80px;
+    animation: slideDown 0.5s ease-out;
     @media (max-width: 768px) {
         padding: 0 15px;
     }
@@ -46,6 +47,8 @@ export const NavbarLogo = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: slideDown 0.5s ease-out;
+    animation-fill-mode: both; /* Mantener la posición final después de la animación */
 `
 
 export const NavbarList = styled.ul`
@@ -60,6 +63,24 @@ export const NavbarList = styled.ul`
         transition: all .2s ease-in-out;
         &:hover {
             color: var(--green);
+        }
+        
+    }
+
+    li, a {
+        animation: slideDown 0.5s ease-out;
+        animation-fill-mode: both; /* Mantener la posición final después de la animación */
+        &:nth-child(1) {
+            animation-delay: 0s;
+        }
+        &:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+        &:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+        &:nth-child(4) {
+            animation-delay: 0.3s;
         }
     }
     span {
@@ -76,11 +97,16 @@ export const NavbarBars = styled.div`
     display: none;
     
     @media (max-width: 768px) {
+        animation: slideDown 0.5s ease-out;
+        animation-fill-mode: both; /* Mantener la posición final después de la animación */
+        background-color: var(--black-600);
+        aspect-ratio: 1; /* Mantiene el ancho igual al alto */
+        height: 100%;
+        border-radius: 50%;
         display: flex;
         font-size: 30px;
         align-items: center;
         justify-content: center;
         color: var(--green);
-        margin-right: 14px;
     }
 `

@@ -165,4 +165,16 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px); /* Empieza más arriba */
+        opacity: 0; /* Comienza transparente */
+    }
+    to {
+        transform: translateY(0); /* Termina en su posición original */
+        opacity: 1; /* Completamente visible */
+    }
+}
+
+
 `

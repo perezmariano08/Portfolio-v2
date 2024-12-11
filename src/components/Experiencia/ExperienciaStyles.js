@@ -114,7 +114,7 @@ export const ExperienciaContenido = styled.div`
     width: 100%;
     min-height: 500px;
 
-    h3 {
+    h4 {
         font-size: 1.5em;
 
         span {

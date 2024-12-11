@@ -23,7 +23,9 @@ export const HeroText = styled.div`
 
     p {
         width: 60%;
-
+        animation: slideDown 0.5s ease-out;
+        animation-fill-mode: both; /* Mantener la posición final después de la animación */
+        animation-delay: 0.9s;
         a {
             color: var(--green);
             font-weight: 500;
@@ -53,6 +55,12 @@ export const HeroText = styled.div`
             width: 100%;
         }
     }
+
+    a {
+        animation: slideDown 0.5s ease-out;
+        animation-fill-mode: both; /* Mantener la posición final después de la animación */
+        animation-delay: 1s;
+    }
 `;
 
 
@@ -61,11 +69,30 @@ export const HeroTitle = styled.div`
     flex-direction: column;
     width: fit-content;
     color: var(--white-100);
+    
+    &:nth-child(1) {
+        
+    }
+    &:nth-child(2) {
+        animation-delay: 0.8s;
+    }
+    &:nth-child(3) {
+        animation-delay: 0.9s;
+    }
     span {
         font-family: var(--code);
         color: var(--green);
         margin-bottom: 10px;
         font-size: 16px;
+        animation: slideDown 0.5s ease-out;
+        animation-fill-mode: both; /* Mantener la posición final después de la animación */
+        animation-delay: 0.7s;
+    }
+
+    h1 {
+        animation: slideDown 0.5s ease-out;
+        animation-fill-mode: both; /* Mantener la posición final después de la animación */
+        animation-delay: 0.8s;
     }
     
 
@@ -74,6 +101,9 @@ export const HeroTitle = styled.div`
         color: var(--white-600);
         font-size: 40px;
         line-height: 40px;
+        animation: slideDown 0.5s ease-out;
+        animation-fill-mode: both; /* Mantener la posición final después de la animación */
+        animation-delay: 0.9s;
     }
 
     @media (max-width: 768px) {

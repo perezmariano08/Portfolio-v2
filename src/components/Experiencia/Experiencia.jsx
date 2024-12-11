@@ -86,7 +86,7 @@ const Experiencia = () => {
                     <TbSunLow />
                     Experiencia
                 </TituloSeccionNombre>
-                <h2>Donde he trabajado</h2>
+                <h2>Mi experiencia laboral</h2>
             </TituloSeccionWrapper>
             <ExperienciaWrapper>
                     <ExperienciaMenu>
@@ -110,7 +110,7 @@ const Experiencia = () => {
                         ))}
                     </ExperienciaMenu>
                     <ExperienciaContenido>
-                        <h3>{contenido[activeIndex].titulo}</h3>
+                        {contenido[activeIndex].titulo}
                         <span className="fecha">{contenido[activeIndex].periodo}</span>
                         <ul>
                             {contenido[activeIndex].tareas.map((tarea, index) => (

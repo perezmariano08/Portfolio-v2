@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ButtonWrapper = styled.button`
+export const ButtonWrapper = styled.a`
     padding: 14px 28px;
     border: 2px solid var(--green);
     background-color: var(--green);
@@ -16,15 +16,9 @@ export const ButtonWrapper = styled.button`
     &:hover {
         background-color: transparent; /* El fondo se vuelve transparente */
         color: var(--green); /* El texto toma el color del borde */
-        border-color: var(--green-light); /* Cambia a un tono más claro de verde */
-        transform: translateY(-4px); /* Desplaza el botón ligeramente hacia arriba */
-        box-shadow: 0 8px 20px rgba(0, 128, 0, 0.3); /* Sombra elegante */
+        border-color: var(--green); /* Cambia a un tono más claro de verde */
     }
 
-    &:active {
-        transform: translateY(0); /* Vuelve a su posición original */
-        box-shadow: 0 4px 10px rgba(0, 128, 0, 0.2); /* Reduce la sombra */
-    }
 
     @media (max-width: 500px) {
         font-size: 15px;

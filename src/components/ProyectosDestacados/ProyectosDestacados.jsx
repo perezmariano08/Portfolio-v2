@@ -13,19 +13,19 @@ const ProyectosDestacados = () => {
                         <TbSunLow />
                         Proyectos
                     </TituloSeccionNombre>
-                    <h2>Algunas cosas que he construido</h2>
+                    <h2>Algunas cosas que desarrollé</h2>
                 </TituloSeccionWrapper>
             <ProyectosDestacadosWrapper>
                 <ProyectosDestacadoItem>
                     <ProyectosDestacadosImagen className='right'>
                         <a href="https://coparelampago.com" target='_blank'>
-                            <img src="/cr_mockup.jpg" alt="" srcset="" />
+                            <img src="/cr_mockup.jpg" />
                         </a>
                     </ProyectosDestacadosImagen>
                     <ProyectosDestacadosTexto>
                         <ProyectosDestacadosTitulo>
                             <a href="https://coparelampago.com" target='_blank'>Copa Relámpago Software</a>
-                            <p>Proyecto de tesis - Sistema de gestion para Copa Relámpago, un torneo de fútbol 7 de Córdoba, Argentina. Cuenta con roles de administrador, planillero y usuario, entre otras muchas cosas más!
+                            <p>Sistema de gestion para Copa Relámpago, un torneo de fútbol 7 de Córdoba, Argentina. Cuenta con roles de administrador, planillero y usuario, entre otras muchas cosas más!
                             </p>
                         </ProyectosDestacadosTitulo>
                         <ProyectosDestacadosTecnologias>
@@ -53,7 +53,7 @@ const ProyectosDestacados = () => {
                 <ProyectosDestacadoItem className='right'>
                     <ProyectosDestacadosImagen className='right'>
                         <a href="https://gentiomkt.com" target='_blank'>
-                            <img src="/gentio_mockup.jpg" alt="" srcset="" />
+                            <img src="/gentio_mockup.jpg" />
                         </a>
                     </ProyectosDestacadosImagen>
                     <ProyectosDestacadosTexto>
@@ -87,7 +87,7 @@ const ProyectosDestacados = () => {
                 <ProyectosDestacadoItem>
                     <ProyectosDestacadosImagen className='right'>
                         <a href="https://neumaticor.com" target='_blank'>
-                            <img src="/neumaticor_mockup.jpg" alt="" srcset="" />
+                            <img src="/neumaticor_mockup.jpg"/>
                         </a>
                     </ProyectosDestacadosImagen>
                     <ProyectosDestacadosTexto>

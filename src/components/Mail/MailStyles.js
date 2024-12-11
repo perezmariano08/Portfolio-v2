@@ -8,6 +8,9 @@ export const MailContainer = styled.div`
     position: fixed;
     bottom: 0;
     right: 60px;
+    animation: slideDown 0.5s ease-out;
+    animation-fill-mode: both; /* Mantener la posición final después de la animación */
+    animation-delay: 1.4s;
 
     a {
         -webkit-writing-mode: vertical-rl;
