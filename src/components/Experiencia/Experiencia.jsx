@@ -79,6 +79,11 @@ const Experiencia = () => {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
+    const fadeVariants = {
+        hidden: { opacity: 0 },
+        visible: { opacity: 1 },
+    };
+
     return (
         <ExperienciaContainer id="experiencia">
             <TituloSeccionWrapper>
@@ -109,7 +114,13 @@ const Experiencia = () => {
                             </ExperienciaMenuOpcion>
                         ))}
                     </ExperienciaMenu>
-                    <ExperienciaContenido>
+                    <ExperienciaContenido
+                        key={activeIndex} // Framer Motion detecta cambios por `key`
+                        variants={fadeVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="hidden"
+                        transition={{ duration: 0.5 }}>
                         {contenido[activeIndex].titulo}
                         <span className="fecha">{contenido[activeIndex].periodo}</span>
                         <ul>

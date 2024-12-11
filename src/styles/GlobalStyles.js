@@ -176,5 +176,14 @@ export const GlobalStyles = createGlobalStyle`
     }
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Comienza transparente */
+    }
+    to {
+        opacity: 1; /* Completamente visible */
+    }
+}
+
 
 `

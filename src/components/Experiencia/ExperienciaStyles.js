@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { ContainerStyled, WrapperStyled } from "../Mockups/Mockups";
+import { motion } from "framer-motion";
 
 export const ExperienciaContainer = styled(ContainerStyled)`
     flex-direction: column;
@@ -105,7 +106,7 @@ export const ExperienciaMenuOpcion = styled.div`
     }
 `
 
-export const ExperienciaContenido = styled.div`
+export const ExperienciaContenido = styled(motion.div)`
     padding: 0 30px;
     color: var(--white-100);
     display: flex;
@@ -113,6 +114,7 @@ export const ExperienciaContenido = styled.div`
     gap: 20px;
     width: 100%;
     min-height: 500px;
+    animation: fadeIn 0.5s ease-out;
 
     h4 {
         font-size: 1.5em;
